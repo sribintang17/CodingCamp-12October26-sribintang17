@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Cegah File CSS/JS Ganda",
+      "trigger": "PostFileCreate",
+      "matcher": "\\.(css|js)$",
+      "action": {
+        "type": "agent",
+        "prompt": "Konvensi project ini hanya mengizinkan SATU file CSS (css/style.css) dan SATU file JavaScript (js/script.js). File baru dengan ekstensi .css atau .js baru saja dibuat. Periksa apakah file tersebut melanggar aturan ini. Jika ya, ingatkan pengguna dan tanyakan apakah file itu memang disengaja atau harus dihapus."
+      }
+    }
+  ]
+}

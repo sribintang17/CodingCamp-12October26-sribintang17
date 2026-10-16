@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Periksa Konvensi Saat Simpan",
+      "trigger": "PostFileSave",
+      "matcher": "\\.(html|css|js)$",
+      "action": {
+        "type": "agent",
+        "prompt": "File frontend project Life Dashboard baru saja disimpan. Lakukan review singkat terhadap perubahan berdasarkan konvensi di .kiro/steering/conventions.md. Khususnya periksa: (1) apakah ada innerHTML dengan input user tanpa escHtml(), (2) apakah ada console.log yang tertinggal, (3) apakah CSS masih menggunakan Custom Properties, bukan nilai hardcoded. Cukup laporan singkat — jangan ubah file apapun secara otomatis."
+      }
+    }
+  ]
+}
